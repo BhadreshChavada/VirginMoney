@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvRoom"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:layout_constraintBottom_toTopOf="@+id/bottomView"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:listitem="@layout/adapter_room" />
+
+        <View
+            android:id="@+id/bottomView"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="@color/grey"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <View
+            android:id="@+id/viewGreen"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="20dp"
+            android:background="@color/green"
+            app:layout_constraintBottom_toBottomOf="@+id/bottomView"
+            app:layout_constraintEnd_toStartOf="@+id/txtAvailableRoom"
+            app:layout_constraintStart_toStartOf="@+id/bottomView"
+            app:layout_constraintTop_toTopOf="@+id/bottomView" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtAvailableRoom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:gravity="center"
+            android:text="@string/available_rooms"
+            android:textColor="@color/green"
+            app:layout_constraintBottom_toBottomOf="@+id/bottomView"
+            app:layout_constraintStart_toEndOf="@+id/viewGreen"
+            app:layout_constraintTop_toTopOf="@+id/bottomView" />
+
+
+        <View
+            android:id="@+id/viewRed"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="10dp"
+            android:background="@color/red"
+            app:layout_constraintBottom_toBottomOf="@+id/bottomView"
+            app:layout_constraintEnd_toStartOf="@+id/txtOccupiedRoom"
+            app:layout_constraintTop_toTopOf="@+id/bottomView" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtOccupiedRoom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:gravity="center"
+            android:text="@string/occupied_rooms"
+            android:textColor="@color/red"
+            app:layout_constraintBottom_toBottomOf="@+id/bottomView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/bottomView" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Virgin Money</string>
+    <string name="user">User</string>
+    <string name="rooms">Rooms</string>
+    <string name="available_rooms">Available Rooms</string>
+    <string name="occupied_rooms">Occupied Rooms</string>
+    <string name="close">Close</string>
+    <string name="something_went_wrong">Something went wrong</string>
+</resources>
